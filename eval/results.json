@@ -1,0 +1,24 @@
+{
+  "fetched_at": 1795458983,
+  "fetched_at_utc": "2026-11-23 18:36 UTC",
+  "lookalike_usdt_jettons_found": 27,
+  "lookalike_blacklisted_by_tonapi": 27,
+  "fake_transfers": {
+    "n": 155,
+    "naive_wrong": 155,
+    "ours_wrong": 0
+  },
+  "fake_usdt_face_value": 22518275.47,
+  "real_transfers": {
+    "n": 60,
+    "naive_wrong": 0,
+    "ours_wrong": 0
+  },
+  "real_master_checked": 60,
+  "canonical_wallet_checked": 40,
+  "canonical_wallet_match": 40,
+  "note": "All real rows pass the Tether master check; only the first canonical_wallet_checked rows also had the canonical jetton-wallet lookup (tonapi free tier). The live server looks up every USD₮ transfer and says UNVERIFIED if the lookup fails.",
+  "baseline": "notification text: symbol looks like USDT and amount > 0 (or comment claims USD received)",
+  "baseline_name": "naive notification baseline",
+  "ours": "verify(): Tether master address + canonical jetton wallet (where looked up) + transaction not aborted"
+}

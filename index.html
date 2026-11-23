@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>PaidGlance</title>
+    <style>
+      /* Even app dark tokens (design-guidelines skill): bg #111, surface #1A1A1A,
+         text #FFF / #8A8A8A, accent #FEF991 used only for the one thing to act on. */
+      :root { --bg:#111111; --surface:#1A1A1A; --line:#2A2A2A; --text:#FFFFFF; --dim:#8A8A8A; --accent:#FEF991; --ok:#7BE38B; --bad:#FF8A7A; }
+      html, body { margin:0; height:100%; background:var(--bg); color:var(--text);
+        font:15px/1.45 "IBM Plex Sans", "Source Han Sans", system-ui, sans-serif; letter-spacing:-0.01em;
+        touch-action:manipulation; -webkit-text-size-adjust:100%; overscroll-behavior:none; }
+      .mono { font-family:"IBM Plex Mono", ui-monospace, monospace; font-variant-numeric:tabular-nums; }
+      .dim { color:var(--dim); }
+      #app { max-width:1180px; margin:0 auto; padding:20px; box-sizing:border-box; }
+      .bar { display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding-bottom:14px; border-bottom:1px solid var(--line); font-size:14px; flex-wrap:wrap; }
+      .bar strong { font-size:18px; letter-spacing:-0.02em; }
+      .note { margin-top:12px; padding:8px 12px; border:1px dashed #555; border-radius:8px; color:var(--dim); font-size:13px; }
+      .grid { display:grid; grid-template-columns: 380px 1fr; gap:24px; margin-top:20px; }
+      .pay { background:var(--surface); border-radius:12px; padding:20px; text-align:center; }
+      .label { font-size:11px; font-weight:500; letter-spacing:0.04em; text-transform:uppercase; color:var(--dim); }
+      .qr { width:300px; height:300px; margin:12px auto; display:block; border-radius:8px; background:#fff; }
+      .amount { font-size:40px; font-weight:600; letter-spacing:-0.02em; color:var(--accent); }
+      .amount span { font-size:18px; color:var(--text); }
+      .code { color:var(--dim); margin-top:4px; }
+      .code b { color:var(--text); }
+      .empty { padding:56px 8px; }
+      .empty p { font-size:18px; margin:12px 0 0; }
+      .totals { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:16px; }
+      .totals > div { background:var(--surface); border-radius:12px; padding:14px 16px; display:flex; flex-direction:column; gap:2px; }
+      .big { font-size:28px; font-weight:600; }
+      .warn { color:var(--bad); }
+      table { width:100%; border-collapse:collapse; font-size:14px; }
+      th { text-align:left; font-size:11px; font-weight:500; letter-spacing:0.04em; text-transform:uppercase; color:var(--dim); padding:6px 8px; border-bottom:1px solid var(--line); }
+      td { padding:9px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+      .num { text-align:right; font-family:"IBM Plex Mono", ui-monospace, monospace; font-variant-numeric:tabular-nums; }
+      .t { color:var(--dim); white-space:nowrap; }
+      .tag { display:inline-block; padding:1px 8px; border-radius:999px; font-size:12px; font-weight:500; }
+      .tag-ok { background:rgba(123,227,139,.14); color:var(--ok); }
+      .tag-bad { background:rgba(255,138,122,.16); color:var(--bad); }
+      .served { margin-left:6px; font-size:12px; color:var(--dim); }
+      .why { color:var(--dim); font-size:13px; }
+      tr.bad td:nth-child(3) { color:var(--dim); text-decoration:line-through; }
+      @media (max-width: 760px) {
+        .grid { grid-template-columns:1fr; }
+        .qr { width:240px; height:240px; }
+        .why { display:none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"><p class="dim">Connecting to the shop wallet…</p></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

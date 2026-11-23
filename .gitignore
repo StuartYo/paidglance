@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.ehpk
+server/shift.json
+server/shift.json.tmp
+__pycache__/
+.env
+.env.local
