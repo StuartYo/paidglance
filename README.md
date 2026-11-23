@@ -8,7 +8,7 @@
 
 Demo video (2 min, English subtitles): see the BUIDL page.
 
-Track: **Crypto & DeFi (Gram Wallet)**. Also relevant to Best Telegram integration (optional bot alert, see below).
+Track: **Crypto & DeFi (Gram Wallet)**.
 
 ## The problem
 
